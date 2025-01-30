@@ -1,0 +1,14 @@
+services:
+  app:
+    build: .
+    container_name: todo_api
+    restart: always
+    volumes:
+      - .:/app
+      - ./prisma/dev.db:/app/prisma/dev.db # SQLite データベースの永続化
+    ports:
+      - "8080:8080"
+      - "5555:5555"
+    environment:
+      DATABASE_URL: "${DATABASE_URL}"
+    command: ["sh", "-c", "npx prisma migrate deploy && npm run dev"]
