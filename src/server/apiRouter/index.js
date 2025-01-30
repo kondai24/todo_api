@@ -1,8 +1,9 @@
 import express from "express";
-import tasksRouter from "./tasks.js";
+import v1Router from "./v1/index.js";
 
 const apiRouter = express.Router();
 
-apiRouter.use("/tasks", tasksRouter);
+// バージョンごとに分離
+apiRouter.use("/v1", v1Router);
 
 export default apiRouter;
