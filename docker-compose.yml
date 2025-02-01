@@ -5,6 +5,7 @@ services:
     restart: always
     volumes:
       - .:/app
+      - /app/node_modules # ホスト側の node_modules ディレクトリをマウントしない
       - ./prisma/dev.db:/app/prisma/dev.db # SQLite データベースの永続化
     ports:
       - "8080:8080"

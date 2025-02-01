@@ -1,17 +1,17 @@
-# Node.js 20をベースイメージとして使う
+# Node.js 20をベースイメージとして使用
 FROM node:20
 
 WORKDIR /app
 
-# パッケージインストール
+# node_modules を除外するため package.json だけコピーしてインストール
 COPY package.json package-lock.json ./
 RUN npm install
 
-# Prisma CLIをインストール
-COPY prisma ./prisma
-RUN npx prisma generate
-
+# 残りのソースコードをコピー
 COPY . .
+
+# Prisma のスキーマを生成
+RUN npx prisma generate
 
 EXPOSE 8080
 EXPOSE 5555
