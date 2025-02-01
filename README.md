@@ -25,7 +25,20 @@ DATABASE_URL=file:./prisma/dev.db
 docker-compose up -d --build
 ```
 
-このコマンドにより、必要な依存関係のインストール、データベースのセットアップ、API サーバーの起動が自動的に行われます。
+このコマンドにより、以下が自動的に行われます：
+
+- 必要な依存関係のインストール
+- データベースのセットアップ
+- API サーバーの起動
+
+### 4. API の確認
+
+上記の手順が完了すると、API は http://localhost:8080 で動作します。
+ブラウザや API クライアント（REST Client など）で動作を確認できます。
+
+```sh
+http://localhost:8080/api/v1/tasks
+```
 
 ## 開発用コマンド
 
