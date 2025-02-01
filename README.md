@@ -36,10 +36,6 @@ docker-compose up -d --build
 上記の手順が完了すると、API は http://localhost:8080 で動作します。
 ブラウザや API クライアント（REST Client など）で動作を確認できます。
 
-```sh
-http://localhost:8080/api/v1/tasks
-```
-
 ## 開発用コマンド
 
 ## コンテナの停止
