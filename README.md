@@ -38,7 +38,7 @@ docker-compose up -d --build
 
 ## 開発用コマンド
 
-## コンテナの停止
+### コンテナの停止
 
 ```sh
 docker-compose down
