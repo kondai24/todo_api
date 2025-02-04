@@ -7,9 +7,9 @@ import {
   updateTask,
 } from "../../controller/tasksController.js";
 
+// /api/v1/tasks
 const tasksRouter = express.Router();
 
-// /api/v1/tasks
 //GET all
 tasksRouter.get("", getAllTask);
 
