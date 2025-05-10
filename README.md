@@ -22,7 +22,7 @@ DATABASE_URL=file:./prisma/dev.db
 以下のコマンドを実行して、Docker コンテナを起動します。
 
 ```sh
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 このコマンドにより、以下が自動的に行われます：
@@ -41,19 +41,19 @@ docker-compose up -d --build
 ### コンテナの停止
 
 ```sh
-docker-compose down
+docker compose down
 ```
 
 ### ログの確認
 
 ```sh
-docker-compose logs -f
+docker compose logs -f
 ```
 
 ### コンテナの再起動（変更を適用）
 
 ```sh
-docker-compose up -d --build
+docker compose up -d --build
 ```
 
 ## API エンドポイント
